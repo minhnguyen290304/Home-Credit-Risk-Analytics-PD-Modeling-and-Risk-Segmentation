@@ -1,4 +1,6 @@
-# Home Credit Risk Analytics: PD Modeling & Risk Segmentation
+# 🏦 Home Credit Risk Analytics: PD Modeling & Risk Segmentation
+
+---
 
 <img src="https://storage.googleapis.com/kaggle-media/competitions/home-credit/about-us-home-credit.jpg" height="70%" width="90%">
 
