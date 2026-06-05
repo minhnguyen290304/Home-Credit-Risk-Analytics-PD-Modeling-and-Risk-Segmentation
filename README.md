@@ -36,7 +36,7 @@ The objective is to demonstrate how data-driven credit risk analytics can suppor
 
 ---
 
-## 1. Business Objectives
+# 1. Business Objectives
 
 This project aims to support credit risk decision-making by addressing four key business questions:
 
@@ -50,7 +50,7 @@ This project aims to support credit risk decision-making by addressing four key 
 
 ---
 
-## 2. Dataset Overview
+# 2. Dataset Overview
 
 The dataset originates from the <a href = "https://www.kaggle.com/competitions/home-credit-default-risk/overview">Home Credit Default Risk competition</a> on Kaggle and contains customer-level information across multiple sources.
 
@@ -177,7 +177,7 @@ Grouping customers into risk bands provides a practical framework for monitoring
 
 ---
 
-# Business Recommendations
+# 7. Business Recommendations
 
 ### Strengthen Risk-Based Lending
 
