@@ -10,33 +10,47 @@ This project develops an end-to-end Credit Risk Analytics and Credit Scoring sol
 
 The objective is to demonstrate how data-driven credit risk analytics can support lending decisions, portfolio management, and customer risk monitoring.
 
+#### The project consists of 7 main parts:
+
+```text
+1. Business Objectives
+
+2. Dataset Overview
+
+3. Project Workflow
+
+4. Executive Summary
+
+5. Analytical Findings
+
+      5.1 Risk Segmentation Analysis
+      5.2 Customer Risk Profile Analysis
+      5.3 Behavioral Credit Risk Analysis
+
+6. Key Business Insights
+
+7. Business Recommendations
+```
+
 ---
 
-## Business Objectives
+## 1. Business Objectives
 
 This project aims to support credit risk decision-making by addressing four key business questions:
 
-#### 1. Which customers are most likely to default?
+1. Which customers are most likely to default?
 
-Develop a Probability of Default (PD) model capable of estimating repayment risk for individual borrowers.
+2. How can customers be segmented based on risk?
 
-#### 2. How can customers be segmented based on risk?
+3. What borrower characteristics are associated with higher credit risk?
 
-Transform model outputs into practical risk bands that support lending, pricing, and portfolio monitoring strategies.
-
-#### 3. What borrower characteristics are associated with higher credit risk?
-
-Identify demographic, financial, and behavioral factors that differentiate low-risk and high-risk customers.
-
-#### 4. How can risk exposure be monitored across the portfolio?
-
-Provide business-friendly dashboards that enable continuous monitoring of portfolio quality and customer risk distribution.
+4. How can risk exposure be monitored across the portfolio?
 
 ---
 
-## Dataset Overview
+## 2. Dataset Overview
 
-The dataset originates from the Home Credit Default Risk competition on Kaggle and contains customer-level information across multiple sources.
+The dataset originates from the <a href = "https://www.kaggle.com/competitions/home-credit-default-risk/overview">Home Credit Default Risk competition</a> on Kaggle and contains customer-level information across multiple sources.
 
 <img src="https://storage.googleapis.com/kaggle-media/competitions/home-credit/home_credit.png" width="70%">
 
@@ -52,7 +66,7 @@ The project combines these datasets to create a unified customer-level risk mart
 
 ---
 
-# Project Workflow
+# 3. Project Workflow
 
 ```text
 Raw Credit Data
@@ -91,55 +105,57 @@ Finally, all risk metrics are consolidated into a SQL-based portfolio mart and v
 
 ---
 
-# Executive Summary
-
-<img src="dashboard preview/Executive Summary.png" width="100%">
-
-Portfolio-level analysis reveals a default rate of approximately 8%, with significant variation across risk segments.
-
-Risk Band E exhibits the highest default rate, exceeding 25%, while Risk Band A maintains a default rate below 1%, demonstrating strong separation between high-risk and low-risk borrowers.
-
-The portfolio exposure analysis further highlights how credit exposure is distributed across risk segments, enabling more effective risk monitoring and capital allocation decisions.
-
----
-
-# Credit Risk Segmentation
-
-<img src="https://github.com/minhnguyen290304/Home-Credit-Risk-Analytics-PD-Modeling-and-Risk-Segmentation/blob/main/dashboard%20preview/Credit%20Risk%20Segmentation.png?raw=true" width="100%">
-
-Customer segmentation analysis reveals substantial differences in default behavior across borrower groups.
-
-Borrowers with lower education levels, unstable employment status, and certain occupation categories exhibit significantly higher default rates than the portfolio average.
-
-These findings can support customer targeting strategies, underwriting policies, and risk-based pricing decisions.
-
----
-
-# Behavioral Credit Risk
-
-<img src="dashboard preview/Behavioral Credit Risk.png" width="100%">
-
-Repayment behavior emerges as one of the strongest indicators of future credit risk.
-
-Customers with higher delinquency levels and repeated late-payment behavior consistently demonstrate elevated default probabilities. Approval rates also decline as customer risk increases, reflecting the relationship between repayment performance and creditworthiness.
-
-Behavioral indicators provide an additional layer of risk assessment beyond traditional demographic and financial attributes.
-
----
-
-# Credit Scoring Model
+# 4. Executive Summary
 
 <img src="dashboard preview/Credit Scoring Model.png" width="100%">
 
-The credit scoring model was developed using XGBoost and achieved a ROC-AUC score of approximately 0.77.
+An XGBoost-based credit scoring model was developed to estimate the Probability of Default (PD) for more than 300,000 loan applicants using customer application data, external bureau records, previous loan history, and repayment behavior.
 
-Feature importance analysis identifies external credit scores, repayment history, and historical borrowing behavior as key drivers of default prediction.
+The model achieved a ROC-AUC score of approximately 0.77 and was subsequently used to segment borrowers into five risk bands ranging from A (lowest risk) to E (highest risk). The resulting framework enables portfolio-level risk monitoring and customer risk assessment through business-friendly risk metrics.
 
-Predicted Probability of Default (PD) aligns closely with observed default rates across risk bands, indicating that the model provides meaningful risk differentiation.
+<img src="dashboard preview/Executive Summary.png" width="100%">
+
+Portfolio analysis reveals substantial differences in repayment behavior across risk segments. Default rates increase consistently from low-risk to high-risk bands, while delinquency and late-payment behavior become significantly more pronounced among higher-risk customers.
 
 ---
 
-# Key Analytical Findings
+# 5. Analytical Findings
+
+## 5.1. Credit Risk Segmentation
+
+<img src="dashboard preview/Credit Risk Segmentation.png" width="100%">
+
+Risk segmentation reveals a clear concentration of credit risk across borrower groups. Default rates increase consistently from Risk Band A to Risk Band E, demonstrating strong separation between low-risk and high-risk customers.
+
+The analysis also shows that credit exposure is not evenly distributed across risk segments. Monitoring both default rates and exposure levels provides a more complete view of portfolio quality and helps identify areas requiring closer risk oversight.
+
+---
+
+## 5.2 Customer Risk Profile Analysis
+
+<img src="dashboard preview/Credit Risk Profile.png" width="100%">
+
+Customer profile analysis reveals meaningful differences in default behavior across demographic and socioeconomic groups.
+
+Borrowers with lower education levels, less stable income sources, and certain occupation categories consistently exhibit higher default rates than the overall portfolio average. These patterns suggest that customer characteristics remain important indicators of repayment capability and long-term creditworthiness.
+
+The analysis also demonstrates that credit risk is not uniformly distributed across the customer base. Certain borrower segments contribute disproportionately to overall portfolio risk, creating opportunities for more targeted underwriting and customer acquisition strategies.
+
+---
+
+## 5.3 Behavioral Credit Risk Analysis
+
+<img src="dashboard preview/Credit Risk Profile.png" width="100%">
+
+Repayment behavior serves as one of the strongest indicators of future credit risk. Customers with higher delinquency levels, more frequent late-payment occurrences, and longer Days Past Due (DPD) values consistently demonstrate elevated default rates.
+
+The analysis further reveals a clear relationship between behavioral indicators and borrower quality. As delinquency measures increase, both default rates and overall risk levels rise substantially, suggesting that repayment behavior provides valuable early warning signals of deteriorating credit quality.
+
+Unlike static customer attributes, behavioral variables continuously evolve over time and therefore offer a dynamic perspective on borrower risk. This makes behavioral monitoring particularly valuable for ongoing portfolio surveillance and proactive risk management.
+
+---
+
+# 6. Key Business Insights
 
 ### Insight 1: Credit Risk Is Highly Concentrated
 
