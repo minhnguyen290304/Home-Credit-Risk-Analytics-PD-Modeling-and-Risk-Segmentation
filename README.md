@@ -1,6 +1,6 @@
 # Home Credit Credit Risk Analytics: PD Modeling & Risk Segmentation
 
-<img src="https://storage.googleapis.com/kaggle-media/competitions/home-credit/about-us-home-credit.jpg" width="90%">
+<img src="https://storage.googleapis.com/kaggle-media/competitions/home-credit/about-us-home-credit.jpg" height="70%" width="90%">
 
 ## Project Overview
 
@@ -16,19 +16,19 @@ The objective is to demonstrate how data-driven credit risk analytics can suppor
 
 This project aims to support credit risk decision-making by addressing four key business questions:
 
-### 1. Which customers are most likely to default?
+#### 1. Which customers are most likely to default?
 
 Develop a Probability of Default (PD) model capable of estimating repayment risk for individual borrowers.
 
-### 2. How can customers be segmented based on risk?
+#### 2. How can customers be segmented based on risk?
 
 Transform model outputs into practical risk bands that support lending, pricing, and portfolio monitoring strategies.
 
-### 3. What borrower characteristics are associated with higher credit risk?
+#### 3. What borrower characteristics are associated with higher credit risk?
 
 Identify demographic, financial, and behavioral factors that differentiate low-risk and high-risk customers.
 
-### 4. How can risk exposure be monitored across the portfolio?
+#### 4. How can risk exposure be monitored across the portfolio?
 
 Provide business-friendly dashboards that enable continuous monitoring of portfolio quality and customer risk distribution.
 
@@ -38,7 +38,7 @@ Provide business-friendly dashboards that enable continuous monitoring of portfo
 
 The dataset originates from the Home Credit Default Risk competition on Kaggle and contains customer-level information across multiple sources.
 
-<img src="https://storage.googleapis.com/kaggle-media/competitions/home-credit/home_credit.png" width="100%">
+<img src="https://storage.googleapis.com/kaggle-media/competitions/home-credit/home_credit.png" width="70%">
 
 | Dataset | Description |
 |----------|------------|
@@ -56,18 +56,16 @@ The project combines these datasets to create a unified customer-level risk mart
 
 ```text
 Raw Credit Data
-       ↓
-Data Validation & Preparation (SQL Server)
-       ↓
-Feature Engineering
-       ↓
-Credit Scoring Model (XGBoost)
-       ↓
-Probability of Default (PD)
-       ↓
-Risk Segmentation (A-E)
-       ↓
-Portfolio Risk Mart
+      ↓
+Data Cleaning, Feature Engineering (Python)
+      ↓
+Credit Scoring Model, PD (XGBoost)
+      ↓
+Risk Segmentation
+      ↓
+Portfolio Risk Mart (SQL Server)
+      ↓
+Power BI Dashboard
        ↓
 Interactive Power BI Dashboard
        ↓
@@ -86,16 +84,16 @@ Finally, all risk metrics are consolidated into a SQL-based portfolio mart and v
 
 | Tool | Purpose |
 |---------|---------|
-| MS SQL Server | Data validation, aggregation, feature mart development |
-| Python | Feature engineering, credit scoring, risk segmentation |
-| XGBoost | Probability of Default (PD) modeling |
-| Power BI | Portfolio monitoring and risk reporting |
+| ![Microsoft SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white) | Data validation, aggregation, feature mart development |
+| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | Feature engineering, credit scoring, risk segmentation |
+| <img src="https://img.shields.io/badge/XGBoost-FF6F00?style=flat-square&logo=xgboost&logoColor=white" width="40%"> | Probability of Default (PD) modeling |
+| ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi) | Portfolio monitoring and risk reporting |
 
 ---
 
 # Executive Summary
 
-<img src="dashboard preview/executive_summary.png" width="100%">
+<img src="dashboard preview/Executive Summary.png" width="100%">
 
 Portfolio-level analysis reveals a default rate of approximately 8%, with significant variation across risk segments.
 
@@ -107,7 +105,7 @@ The portfolio exposure analysis further highlights how credit exposure is distri
 
 # Credit Risk Segmentation
 
-<img src="dashboard preview/customer_risk_segmentation.png" width="100%">
+<img src="https://github.com/minhnguyen290304/Home-Credit-Risk-Analytics-PD-Modeling-and-Risk-Segmentation/blob/main/dashboard%20preview/Credit%20Risk%20Segmentation.png?raw=true" width="100%">
 
 Customer segmentation analysis reveals substantial differences in default behavior across borrower groups.
 
@@ -119,7 +117,7 @@ These findings can support customer targeting strategies, underwriting policies,
 
 # Behavioral Credit Risk
 
-<img src="dashboard preview/behavioral_credit_risk.png" width="100%">
+<img src="dashboard preview/Behavioral Credit Risk.png" width="100%">
 
 Repayment behavior emerges as one of the strongest indicators of future credit risk.
 
@@ -131,7 +129,7 @@ Behavioral indicators provide an additional layer of risk assessment beyond trad
 
 # Credit Scoring Model
 
-<img src="dashboard preview/credit_scoring_model.png" width="100%">
+<img src="dashboard preview/Credit Scoring Model.png" width="100%">
 
 The credit scoring model was developed using XGBoost and achieved a ROC-AUC score of approximately 0.77.
 
@@ -194,5 +192,4 @@ Implement regular portfolio reviews using risk-based segmentation and exposure m
 
 ---
 
-⭐ Nothing is impossible  
-💫 Learn, learn more, learn forever
+⭐ Nothing is impossible  💫 Learn, learn more, learn forever
