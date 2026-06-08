@@ -147,7 +147,7 @@ The analysis also demonstrates that credit risk is not uniformly distributed acr
 
 ## 5.3 Behavioral Credit Risk Analysis
 
-<img src="dashboard preview/Credit Risk Profile.png" width="100%">
+<img src="dashboard preview/Behavioral Credit Risk.png" width="100%">
 
 Repayment behavior serves as one of the strongest indicators of future credit risk. Customers with higher delinquency levels, more frequent late-payment occurrences, and longer Days Past Due (DPD) values consistently demonstrate elevated default rates.
 
